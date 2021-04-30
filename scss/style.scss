@@ -1,0 +1,505 @@
+//ONLY USE THIS FILE
+$brand-blue-100: #0A2A49;
+$brand-blue-50: #7F7FA8;
+$brand-blue-10: #E5E5ED;
+$brand-red-100: #D64A28;
+$brand-orange-100: #F79220;
+$brand-aqua-100: #1A617E;
+$brand-red-50: #FFAB90;
+$brand-red-10: #FFEEE8;
+$background-red: #FAECE9;
+$light-gray: #eee;
+$background-gray: #E8ECF0;
+////////////////////////////////////////////To-do:////////////////////////////////////////////
+//  Change brand hover color 
+//  Make hover blue consistent
+//   Add sec report link
+// button margin
+/////////////////////////////////////////////////////////////////////////////////////////////
+//@import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,400i,500,600i,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,500,600i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,600i,700');
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+p {
+    line-height: 32px;
+    font-family: 'Roboto', serif;
+}
+
+.page-content {
+    background-color: $brand-blue-10;
+    a {
+        color: $brand-blue-100;
+    }
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    //    top: 0;
+}
+
+section {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: block;
+    z-index: 0;
+}
+
+#home {
+    background: #A0CAB5;
+    top: 40px;
+}
+
+#work {
+    background: #CDE9CA;
+}
+
+#about {
+    background: #F1EDD0;
+}
+
+#contact {
+    background: #F38A8A;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.cta {
+    h3 {
+        color: $brand-red-100;
+    }
+    h3:hover {
+        color: $brand-orange-100;
+    }
+}
+
+.cta:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: $brand-blue-100;
+    text-decoration: none;
+}
+
+//.newspaper {
+//    column-count: 2;
+//}
+.sec-subhead {
+    border-left: 6px solid $brand-orange-100;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+.sec-subhead2 {
+    border-left: 6px solid $brand-red-100;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+.newspaper3 {
+    column-count: 3;
+}
+
+.newspaper-col {
+    column-count: 2;
+}
+
+h1 {
+    color: $brand-red-100;
+    font-size: 50px;
+}
+
+h1,
+h2 {
+    margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 55px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+h4 {
+    color: $brand-orange-100;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+p,
+li {
+    font-weight: 400;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+ol {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+////////////// nav and footer stuff //////////////
+.navbar-right {
+    //    margin-bottom: -15px;
+}
+
+.navbar-right:hover {
+    a:hover {
+        //        border-bottom: #ffffff solid 3px;
+        background-color: $brand-blue-100 !important;
+        color: white;
+    }
+}
+
+.navbar-right:hover {
+    a:hover:after {
+        content: "";
+        /* This is necessary for the pseudo element to work. */
+        display: block;
+        /* This will put the pseudo element on its own line. */
+        margin: 0 auto;
+        /* This will center the border. */
+        width: 100%;
+        /* Change this to whatever width you want. */
+        padding-top: 5px;
+        /* This creates some space between the element and the border. */
+        border-bottom: #ffffff solid 3px;
+    }
+}
+
+.active:after {
+    content: "";
+    /* This is necessary for the pseudo element to work. */
+    display: block;
+    /* This will put the pseudo element on its own line. */
+    margin: 0 auto;
+    /* This will center the border. */
+    width: 100%;
+    /* Change this to whatever width you want. */
+    padding-top: 5px;
+    /* This creates some space between the element and the border. */
+    border-bottom: #ffffff solid 3px;
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand:hover {
+    color: $brand-orange-100;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.index-nav {
+    border-bottom: $brand-aqua-100 solid 8px;
+}
+
+nav,
+footer {
+    background-color: $brand-blue-100;
+    a,
+    p,
+    li {
+        color: #ffffff;
+        font-size: 18px;
+    }
+    h3 {
+        color: white;
+        margin-top: 8px;
+    }
+}
+
+$breakpoint-alpha: 480px; // adjust to your needs
+.rwd-table {
+    margin: 1em 0;
+    min-width: 300px; // adjust to your needs
+    tr {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
+    }
+    td {
+        display: block;
+        &:first-child {
+            padding-top: .5em;
+        }
+        &:last-child {
+            padding-bottom: .5em;
+        }
+        &:before {
+            content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+            font-weight: bold;
+            // optional stuff to make it look nicer
+            width: 6.5em; // magic number :( adjust according to your own content
+            display: inline-block;
+            // end options
+            @media (min-width: $breakpoint-alpha) {
+                display: none;
+            }
+        }
+    }
+    th,
+    td {
+        text-align: left;
+        @media (min-width: $breakpoint-alpha) {
+            display: table-cell;
+            padding: .25em .5em;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+// presentational styling
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+.rwd-table {
+    background: $brand-blue-100;
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
+    tr {
+        border-color: lighten($brand-blue-100, 10%);
+    }
+    th,
+    td {
+        margin: .5em 1em;
+        @media (min-width: $breakpoint-alpha) {
+            padding: 1em !important;
+        }
+    }
+    th,
+    td:before {
+        color: $brand-orange-100;
+    }
+}
+
+.img-responsive {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+footer {
+    border-top: $brand-aqua-100 solid 8px;
+}
+
+nav {
+    //    border-bottom: $brand-red-100 4px solid;
+}
+
+footer {
+    padding: 20px 30px;
+    bottom: 0px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+////////////// nav and footer end //////////////
+.header-sec {
+    //    h1 {
+    //        color: #fff !important;
+    //    }
+    //    p {
+    //        color: #eee;
+    //    }
+    //    background-color: $brand-blue-100 !important;
+}
+
+.caption {
+    font-size: .8em;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* needed for old browsers */
+
+dialog {
+    display: block;
+}
+
+
+/* removes scroll when modal is opened */
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.highlight {
+    border-bottom: $brand-orange-100 4px solid;
+}
+
+a.booka {
+    color: $brand-orange-100 !important;
+}
+
+
+/* overlay covers everything */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 666;
+}
+
+
+/* modal */
+
+.modal {
+    position: fixed;
+    left: 25%;
+    right: auto;
+    top: 15%;
+    width: 50%;
+    background: #fff;
+    z-index: 667;
+}
+
+.row {
+    margin: 20px 0;
+}
+
+h3 {
+    color: $brand-red-100;
+}
+
+//.fixed-body {
+//    position: fixed;
+//}
+.breadcrumb > li {
+    display: inline;
+}
+
+.breadcrumb {
+    background-color: $brand-blue-100;
+    font-size: 16px;
+    a {
+        color: #ffffff;
+    }
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border-radius: 0;
+    padding: 20px 20px 20px 0;
+    text-transform: uppercase;
+    .glyphicon-chevron-right {
+        color: #ffffff;
+        padding: 0 10px;
+    }
+    li,
+    span {
+        float: left;
+    }
+    a:hover {
+        text-decoration: none;
+        color: $brand-orange-100;
+    }
+}
+
+.sec-head {
+    background-color: $brand-aqua-100;
+    h2 {
+        color: #ffffff;
+        margin-bottom: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    margin: 0;
+    padding: 0px 0 0 0;
+}
+
+.sec-head-end {
+    @extend .sec-head;
+    background-color: $brand-orange-100;
+}
+
+.skip-overview {
+    //    margin-top: 100px;
+    h1 {
+        color: #ffffff !important;
+    }
+}
+
+.skip-overview,
+.sec-head {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container-div {
+    //    height: 80vh;
+    background-color: $brand-blue-100;
+    p {
+        color: $brand-blue-10;
+    }
+}
+
+#content {
+    //    margin-top: 40px;
+}
+
+section {
+    padding: 1px 0 10px 0;
+}
+
+//section:nth-child(even) {
+//    background-color: $background-gray;
+//}
+//section {
+//    border-left: $brand-red-100 3px solid;
+//    }
+//
+//section:not(.header-sec):nth-child(odd) {
+//    border-left: {
+//        color: $brand-orange-100 3px solid;
+//    }
+//}
+//
+.pop:hover {
+    opacity: .5;
+}
+
+body {
+    //    background: #f9f9f9;
+    font-weight: 300;
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+    color: #333;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
